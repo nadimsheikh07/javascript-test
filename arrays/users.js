@@ -21,11 +21,13 @@ const users = [
 
 const search = "Nadim"
 
+users.sort((a, b) => a.class.localeCompare(b.class))
+
 console.table(users)
 
-const findUser = users.filter((user) => String(user.name).toLowerCase() == search.toLowerCase())
+// const findUser = users.filter((user) => String(user.name).toLowerCase() == search.toLowerCase())
 
-console.table(findUser)
+// console.table(findUser)
 
 
 // for (let index = 0; index < users.length; index++) {
@@ -37,4 +39,4 @@ console.table(findUser)
 
 
 
-console.timeLog()
+// console.timeLog()
