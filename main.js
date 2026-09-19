@@ -10,3 +10,4 @@ Greet.apply(user, ["hi", "admin"]);
 
 
 Test()
+
