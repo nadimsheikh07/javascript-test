@@ -4,22 +4,16 @@ console.log(array.flat(2))
 console.log(array.flat(Infinity))
 
 
+function flattenDeep(arr) {
+    let result = [];
+    for (let item of arr) {
+        if (Array.isArray(item)) {
+            result = result.concat(flattenDeep(item)); // Recursive call
+        } else {
+            result.push(item);
+        }
+    }
+    return result;
+}
 
-let users = [
-    {
-        name: "a",
-    },
-    [
-        {
-            name: "b"
-        },
-        [
-            {
-                name: "c"
-            }
-        ]
-    ]
-]
-
-
-console.log(users.flat(Infinity))
+console.log(flattenDeep(array));
